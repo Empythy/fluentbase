@@ -11,9 +11,9 @@ import (
 
 	"github.com/tidwall/buntdb"
 	"github.com/tidwall/resp"
-	"github.com/tidwall/tile38/internal/endpoint"
-	"github.com/tidwall/tile38/internal/glob"
-	"github.com/tidwall/tile38/internal/log"
+	"github.com/gvsafronov/fluentbase/internal/endpoint"
+	"github.com/gvsafronov/fluentbase/internal/glob"
+	"github.com/gvsafronov/fluentbase/internal/log"
 )
 
 var hookLogSetDefaults = &buntdb.SetOptions{

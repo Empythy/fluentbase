@@ -15,7 +15,7 @@ import (
 
 	"github.com/tidwall/geojson/geo"
 	"github.com/tidwall/resp"
-	"github.com/tidwall/tile38/internal/log"
+	"github.com/gvsafronov/fluentbase/internal/log"
 	"github.com/yuin/gopher-lua"
 	luajson "layeh.com/gopher-json"
 )

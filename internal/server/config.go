@@ -12,7 +12,7 @@ import (
 
 	"github.com/tidwall/gjson"
 	"github.com/tidwall/resp"
-	"github.com/tidwall/tile38/internal/glob"
+	"github.com/gvsafronov/fluentbase/internal/glob"
 )
 
 const (

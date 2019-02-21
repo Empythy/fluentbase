@@ -10,7 +10,7 @@ import (
 	"time"
 
 	"github.com/tidwall/resp"
-	"github.com/tidwall/tile38/internal/log"
+	"github.com/gvsafronov/fluentbase/internal/log"
 )
 
 var errCorruptedAOF = errors.New("corrupted aof file")

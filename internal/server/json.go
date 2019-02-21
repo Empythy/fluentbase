@@ -11,7 +11,7 @@ import (
 	"github.com/tidwall/gjson"
 	"github.com/tidwall/resp"
 	"github.com/tidwall/sjson"
-	"github.com/tidwall/tile38/internal/collection"
+	"github.com/gvsafronov/fluentbase/internal/collection"
 )
 
 func appendJSONString(b []byte, s string) []byte {

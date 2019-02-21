@@ -9,8 +9,8 @@ import (
 	"time"
 
 	"github.com/tidwall/resp"
-	"github.com/tidwall/tile38/core"
-	"github.com/tidwall/tile38/internal/log"
+	"github.com/gvsafronov/fluentbase/core"
+	"github.com/gvsafronov/fluentbase/internal/log"
 )
 
 // checksum performs a simple md5 checksum on the aof file

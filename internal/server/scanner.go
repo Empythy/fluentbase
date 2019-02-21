@@ -10,9 +10,9 @@ import (
 	"github.com/mmcloughlin/geohash"
 	"github.com/tidwall/geojson"
 	"github.com/tidwall/resp"
-	"github.com/tidwall/tile38/internal/clip"
-	"github.com/tidwall/tile38/internal/collection"
-	"github.com/tidwall/tile38/internal/glob"
+	"github.com/gvsafronov/fluentbase/internal/clip"
+	"github.com/gvsafronov/fluentbase/internal/collection"
+	"github.com/gvsafronov/fluentbase/internal/glob"
 )
 
 const limitItems = 100

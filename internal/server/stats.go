@@ -12,8 +12,8 @@ import (
 	"time"
 
 	"github.com/tidwall/resp"
-	"github.com/tidwall/tile38/core"
-	"github.com/tidwall/tile38/internal/collection"
+	"github.com/gvsafronov/fluentbase/core"
+	"github.com/gvsafronov/fluentbase/internal/collection"
 )
 
 func (c *Server) cmdStats(msg *Message) (res resp.Value, err error) {

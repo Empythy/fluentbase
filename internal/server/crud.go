@@ -12,8 +12,8 @@ import (
 	"github.com/tidwall/geojson"
 	"github.com/tidwall/geojson/geometry"
 	"github.com/tidwall/resp"
-	"github.com/tidwall/tile38/internal/collection"
-	"github.com/tidwall/tile38/internal/glob"
+	"github.com/gvsafronov/fluentbase/internal/collection"
+	"github.com/gvsafronov/fluentbase/internal/glob"
 	"github.com/tidwall/tinybtree"
 )
 

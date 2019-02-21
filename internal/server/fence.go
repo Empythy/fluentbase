@@ -9,7 +9,7 @@ import (
 	"github.com/tidwall/geojson/geo"
 	"github.com/tidwall/geojson/geometry"
 	"github.com/tidwall/gjson"
-	"github.com/tidwall/tile38/internal/glob"
+	"github.com/gvsafronov/fluentbase/internal/glob"
 )
 
 // FenceMatch executes a fence match returns back json messages for fence detection.

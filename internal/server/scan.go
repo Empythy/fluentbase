@@ -7,7 +7,7 @@ import (
 
 	"github.com/tidwall/geojson"
 	"github.com/tidwall/resp"
-	"github.com/tidwall/tile38/internal/glob"
+	"github.com/gvsafronov/fluentbase/internal/glob"
 )
 
 func (c *Server) cmdScanArgs(vs []string) (

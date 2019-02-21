@@ -9,9 +9,9 @@ import (
 	"time"
 
 	"github.com/tidwall/geojson"
-	"github.com/tidwall/tile38/core"
-	"github.com/tidwall/tile38/internal/collection"
-	"github.com/tidwall/tile38/internal/log"
+	"github.com/gvsafronov/fluentbase/core"
+	"github.com/gvsafronov/fluentbase/internal/collection"
+	"github.com/gvsafronov/fluentbase/internal/log"
 )
 
 const maxkeys = 8

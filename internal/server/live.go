@@ -8,7 +8,7 @@ import (
 	"net"
 	"sync"
 
-	"github.com/tidwall/tile38/internal/log"
+	"github.com/gvsafronov/fluentbase/internal/log"
 )
 
 type liveBuffer struct {

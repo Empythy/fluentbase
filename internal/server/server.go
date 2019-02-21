@@ -29,11 +29,11 @@ import (
 	"github.com/tidwall/geojson/geometry"
 	"github.com/tidwall/redcon"
 	"github.com/tidwall/resp"
-	"github.com/tidwall/tile38/core"
-	"github.com/tidwall/tile38/internal/collection"
-	"github.com/tidwall/tile38/internal/endpoint"
-	"github.com/tidwall/tile38/internal/expire"
-	"github.com/tidwall/tile38/internal/log"
+	"github.com/gvsafronov/fluentbase/core"
+	"github.com/gvsafronov/fluentbase/internal/collection"
+	"github.com/gvsafronov/fluentbase/internal/endpoint"
+	"github.com/gvsafronov/fluentbase/internal/expire"
+	"github.com/gvsafronov/fluentbase/internal/log"
 	"github.com/tidwall/tinybtree"
 )
 
@@ -129,7 +129,7 @@ func Serve(host string, port int, dir string, http bool) error {
 	if core.QueueFileName == "" {
 		core.QueueFileName = path.Join(dir, "queue.db")
 	}
-	log.Infof("Server started, Tile38 version %s, git %s", core.Version, core.GitSHA)
+	log.Infof("Server started, Fluentbase version %s, git %s", core.Version, core.GitSHA)
 
 	// Initialize the server
 	server := &Server{

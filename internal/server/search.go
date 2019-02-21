@@ -13,8 +13,8 @@ import (
 	"github.com/tidwall/geojson/geo"
 	"github.com/tidwall/geojson/geometry"
 	"github.com/tidwall/resp"
-	"github.com/tidwall/tile38/internal/bing"
-	"github.com/tidwall/tile38/internal/glob"
+	"github.com/gvsafronov/fluentbase/internal/bing"
+	"github.com/gvsafronov/fluentbase/internal/glob"
 )
 
 const defaultCircleSteps = 64

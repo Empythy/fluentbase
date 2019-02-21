@@ -13,8 +13,8 @@ import (
 	"github.com/tidwall/geojson"
 	"github.com/tidwall/geojson/geometry"
 	"github.com/tidwall/resp"
-	"github.com/tidwall/tile38/internal/bing"
-	"github.com/tidwall/tile38/internal/clip"
+	"github.com/gvsafronov/fluentbase/internal/bing"
+	"github.com/gvsafronov/fluentbase/internal/clip"
 )
 
 func (s *Server) parseArea(ovs []string, doClip bool) (vs []string, o geojson.Object, err error) {
