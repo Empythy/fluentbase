@@ -1,0 +1,5 @@
+./cmd/tile38-benchmark/*
+./cmd/tile38-cli/*
+./cmd/tile38-luamemtest/*
+./cmd/tile38-benchmark/*
+./cmd/tile38-server/*
