@@ -8,7 +8,7 @@
 <a href="https://hub.docker.com/r/fluentbase/fluentbase"><img src="https://img.shields.io/badge/docker-ready-blue.svg" alt="Docker Ready"></a>
 </p>
 
-fluentbase is an open source (MIT licensed), in-memory geolocation data store, spatial index, and realtime geofence. It supports a variety of object types including lat/lon points, bounding boxes, XYZ tiles, Geohashes, and GeoJSON. 
+fluentbase is an open source (MIT licensed), in-memory geolocation data store, spatial index, and realtime geofence, distributed uder MIT LICENSE using code of [Tile-38](https://github.com/tidwall/tile38), which also distributed uder MIT LICENSE.  It supports a variety of object types including lat/lon points, bounding boxes, XYZ tiles, Geohashes, and GeoJSON. 
 
 <p align="center">
 <i>This README is quick start document. You can find detailed documentation at <a href="http://fluentbase.com">http://fluentbase.com</a>.</i><br><br>
