@@ -11,18 +11,18 @@
 fluentbase is an open source (MIT licensed), in-memory geolocation data store, spatial index, and realtime geofence, distributed uder MIT LICENSE using code of [Tile-38](https://github.com/tidwall/tile38), which also distributed uder MIT LICENSE.  It supports a variety of object types including lat/lon points, bounding boxes, XYZ tiles, Geohashes, and GeoJSON. 
 
 <p align="center">
-<i>This README is quick start document. You can find detailed documentation at <a href="http://fluentbase.com">http://fluentbase.com</a>.</i><br><br>
+<i>This README is quick start document. You can find detailed documentation at <a href="https://fluentbase.org">https://fluentbase.org</a>.</i><br><br>
 <a href="#searching"><img src="/internal/assets/search-nearby.png" alt="Nearby" border="0" width="120" height="120"></a>
 <a href="#searching"><img src="/internal/assets/search-within.png" alt="Within" border="0" width="120" height="120"></a>
 <a href="#searching"><img src="/internal/assets/search-intersects.png" alt="Intersects" border="0" width="120" height="120"></a>
-<a href="http://fluentbase.com/topics/geofencing"><img src="/internal/assets/geofence.gif" alt="Geofencing" border="0" width="120" height="120"></a>
-<a href="http://fluentbase.com/topics/roaming-geofences"><img src="/internal/assets/roaming.gif" alt="Roaming Geofences" border="0" width="120" height="120"></a>
+<a href="https://fluentbase.org/topics/geofencing"><img src="/internal/assets/geofence.gif" alt="Geofencing" border="0" width="120" height="120"></a>
+<a href="https://fluentbase.org/topics/roaming-geofences"><img src="/internal/assets/roaming.gif" alt="Roaming Geofences" border="0" width="120" height="120"></a>
 </p>
 
 ## Features
 
 - Spatial index with [search](#searching) methods such as Nearby, Within, and Intersects.
-- Realtime [geofencing](#geofencing) through [webhooks](http://fluentbase.com/commands/sethook) or [pub/sub channels](#pubsub-channels).
+- Realtime [geofencing](#geofencing) through [webhooks](https://fluentbase.org/commands/sethook) or [pub/sub channels](#pubsub-channels).
 - Object types of [lat/lon](#latlon-point), [bbox](#bounding-box), [Geohash](#geohash), [GeoJSON](#geojson), [QuadKey](#quadkey), and [XYZ tile](#xyz-tile).
 - Support for lots of [Clients Libraries](#client-libraries) written in many different languages.
 - Variety of protocols, including [http](#http) (curl), [websockets](#websockets), [telnet](#telnet), and the [Redis RESP](http://redis.io/topics/protocol).
