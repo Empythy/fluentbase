@@ -34,7 +34,6 @@ fluentbase is an open source (MIT licensed), in-memory geolocation data store, s
 ## Components
 - `fluentbase-server    ` - The server
 - `fluentbase-cli       ` - Command line interface tool
-- `fluentbase-benchmark ` - Server benchmark tool
 
 ## Getting Started
 
