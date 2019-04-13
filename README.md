@@ -74,7 +74,7 @@ To run a single server:
 ```
 $ ./fluentbase-server
 
-# The fluentbase shell connects to localhost:9851
+# The fluentbase shell connects to localhost:9470
 $ ./fluentbase-cli
 > help
 ```
@@ -99,7 +99,7 @@ $ ./fluentbase-cli
 > drop fleet                                 # removes all 
 ```
 
-fluentbase has a ton of [great commands](http://fluentbase.com/commands).
+The full list of commands you can found on [full command list](https://fluentbase.org/%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B/).
 
 ## Fields
 Fields are extra data that belongs to an object. A field is always a double precision floating point. There is no limit to the number of fields that an object can have. 
