@@ -41,17 +41,6 @@ fluentbase is an open source (MIT licensed), in-memory geolocation data store, s
 
 Perhaps the easiest way to get the latest fluentbase is to use one of the pre-built release binaries which are available for OSX, Linux, FreeBSD, and Windows. Instructions for using these binaries are on the GitHub [releases page](https://github.com/tidwall/fluentbase/releases).
 
-### Docker 
-
-To run the latest stable version of fluentbase:
-
-```
-docker pull fluentbase/fluentbase
-docker run -p 9851:9851 fluentbase/fluentbase
-```
-
-Visit the [fluentbase hub page](https://hub.docker.com/r/fluentbase/fluentbase/) for more information.
-
 ### Homebrew (macOS)
 
 Install fluentbase using [Homebrew](http://brew.sh/)
