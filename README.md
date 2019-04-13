@@ -1,11 +1,10 @@
 <p align="center">
-  <a href="http://fluentbase.com"><img src="/internal/assets/logo.png" alt="fluentbase"></a>
+  <a href="https://fluentbase.org"><img src="/internal/assets/logo.png" alt="fluentbase"></a>
 </p>
 <p align="center">
 <a href="https://join.slack.com/t/fluentbase/shared_invite/enQtMzQ0OTEwMDUxMzc5LTc0NTJjZmM3YjFhOGZiZGU2NDNjOWEwM2Q5ZWE3MzFiYWZkZDIyN2U2ZmUzZDBmODU0MjI1ZjQ0N2Y1M2I1NTg"><img src="https://img.shields.io/badge/slack-channel-orange.svg" alt="Slack Channel"></a>
 <a href="https://github.com/tidwall/fluentbase/releases"><img src="https://img.shields.io/badge/version-1.15.0-green.svg?" alt="Version"></a>
 <a href="https://travis-ci.org/tidwall/fluentbase"><img src="https://travis-ci.org/tidwall/fluentbase.svg?branch=master" alt="Build Status"></a>
-<a href="https://hub.docker.com/r/fluentbase/fluentbase"><img src="https://img.shields.io/badge/docker-ready-blue.svg" alt="Docker Ready"></a>
 </p>
 
 fluentbase is an open source (MIT licensed), in-memory geolocation data store, spatial index, and realtime geofence, distributed uder MIT LICENSE using code of [Tile-38](https://github.com/tidwall/tile38), which also distributed uder MIT LICENSE.  It supports a variety of object types including lat/lon points, bounding boxes, XYZ tiles, Geohashes, and GeoJSON. 
@@ -325,7 +324,7 @@ fluentbase uses the [Redis RESP](http://redis.io/topics/protocol) protocol nativ
 
 ## Contact
 
-Josh Baker [@tidwall](http://twitter.com/tidwall)
+Grigoriy Safronov [@gvsafronov](gvsafronov@gmail.com)
 
 ## License
 
