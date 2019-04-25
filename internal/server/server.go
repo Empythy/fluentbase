@@ -121,7 +121,7 @@ type Server struct {
 	hookex expire.List
 }
 
-// Serve starts a new tile38 server
+// Serve starts a new fluentbase server
 func Serve(host string, port int, dir string, http bool) error {
 	if core.AppendFileName == "" {
 		core.AppendFileName = path.Join(dir, "appendonly.aof")
