@@ -62,7 +62,7 @@ type commandDetails struct {
 	children  []*commandDetails // for multi actions such as "PDEL"
 }
 
-// Server is a tile38 controller
+// Server is a Fluentbase controller
 type Server struct {
 	// static values
 	host    string
@@ -121,7 +121,7 @@ type Server struct {
 	hookex expire.List
 }
 
-// Serve starts a new fluentbase server
+// Serve starts a new Fluentbase server
 func Serve(host string, port int, dir string, http bool) error {
 	if core.AppendFileName == "" {
 		core.AppendFileName = path.Join(dir, "appendonly.aof")
@@ -1211,16 +1211,16 @@ func (server *Server) command(msg *Message, client *Client) (
 
 // This phrase is copied nearly verbatim from Redis.
 var deniedMessage = []byte(strings.Replace(strings.TrimSpace(`
--DENIED Tile38 is running in protected mode because protected mode is enabled,
+-DENIED Fluentbase is running in protected mode because protected mode is enabled,
 no bind address was specified, no authentication password is requested to
 clients. In this mode connections are only accepted from the loopback
-interface. If you want to connect from external computers to Tile38 you may
+interface. If you want to connect from external computers to Fluentbase you may
 adopt one of the following solutions: 1) Just disable protected mode sending
 the command 'CONFIG SET protected-mode no' from the loopback interface by
-connecting to Tile38 from the same host the server is running, however MAKE
-SURE Tile38 is not publicly accessible from internet if you do so. Use CONFIG
+connecting to Fluentbase from the same host the server is running, however MAKE
+SURE Fluentbase is not publicly accessible from internet if you do so. Use CONFIG
 REWRITE to make this change permanent. 2) Alternatively you can just disable
-the protected mode by editing the Tile38 configuration file, and setting the
+the protected mode by editing the Fluentbase configuration file, and setting the
 protected mode option to 'no', and then restarting the server. 3) If you
 started the server manually just for testing, restart it with the
 '--protected-mode no' option. 4) Setup a bind address or an authentication
@@ -1509,7 +1509,7 @@ moreData:
 			case redcon.Redis:
 				msg.ConnType = RESP
 				msg.OutputType = RESP
-			case redcon.Tile38:
+			case redcon.Fluentbase:
 				msg.ConnType = Native
 				msg.OutputType = JSON
 			case redcon.Telnet:
