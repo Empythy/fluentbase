@@ -42,7 +42,7 @@ type connError struct {
 
 var (
 	hostname   = "127.0.0.1"
-	output     = "json"
+   	output     = "json"
 	port       = 9470
 	oneCommand string
 	raw        bool
@@ -278,7 +278,7 @@ func main() {
 					command, err = line.Prompt("not connected> ")
 				} else {
                      fmt.Println("\n")
-					command, err = line.Prompt(addr + "> ")
+               		command, err = line.Prompt("fluentbase:~>" + "> ") /*prompt shell */
 				}
 			}
 
