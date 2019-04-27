@@ -58,7 +58,8 @@ func showHelp() bool {
 	} else {
 		gitsha = " (git:" + core.GitSHA + ")"
 	}
-	fmt.Fprintf(os.Stdout, "fluentbase-cli %s%s\n\n", core.Version, gitsha)
+	//fmt.Fprintf(os.Stdout, "fluentbase-cli %s%s\n\n", core.Version, gitsha)
+    fmt.Fprintf(os.Stdout, "fluentbase-cli %s%s\n\n", gitsha)
 	fmt.Fprintf(os.Stdout, "Usage: fluentbase-cli [OPTIONS] [cmd [arg [arg ...]]]\n")
 	fmt.Fprintf(os.Stdout, " --raw              Use raw formatting for replies (default when STDOUT is not a tty)\n")
 	fmt.Fprintf(os.Stdout, " --noprompt         Do not display a prompt\n")
@@ -128,7 +129,7 @@ func parseArgs() bool {
 }
 
 func refusedErrorString(addr string) string {
-	return fmt.Sprintf("Could not connect to fluentbase at %s: Connection refused", addr)
+	return fmt.Sprintf("Could not connect to fluentbase-server at %s: Connection refused", addr)
 }
 
 var groupsM = make(map[string][]string)
