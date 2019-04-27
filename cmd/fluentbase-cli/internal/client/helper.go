@@ -5,14 +5,14 @@ import (
 	"errors"
 )
 
-// Standard represents a standard tile38 message.
+// Standard represents a standard fluentbase message.
 type Standard struct {
 	OK      bool   `json:"ok"`
 	Err     string `json:"err"`
 	Elapsed string `json:"elapsed"`
 }
 
-// ServerStats represents tile38 server statistics.
+// ServerStats represents fluentbase server statistics.
 type ServerStats struct {
 	Standard
 	Stats struct {
@@ -29,7 +29,7 @@ type ServerStats struct {
 	} `json:"stats"`
 }
 
-// Server returns tile38 server statistics.
+// Server returns fluentbase server statistics.
 func (conn *Conn) Server() (ServerStats, error) {
 	var stats ServerStats
 	msg, err := conn.Do("server")
