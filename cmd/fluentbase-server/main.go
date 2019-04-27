@@ -140,7 +140,7 @@ Developer Options:
 			flag.Usage()
 			return
 		case "--version":
-			fmt.Fprintf(os.Stdout, "%s\n",/*, versionLine*/ "current version: 1.17")
+			fmt.Fprintf(os.Stdout, "%s\n",/*, versionLine*/ "current version: 2.1")
 			return
 		case "--protected-mode", "-protected-mode":
 			i++
