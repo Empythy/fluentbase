@@ -130,7 +130,7 @@ func Serve(host string, port int, dir string, http bool) error {
 		core.QueueFileName = path.Join(dir, "queue.db")
 	}
 	//log.Infof("Server started, Fluentbase version %s, git %s", core.Version, core.GitSHA)
-	log.Infof("Server started, Fluentbase version 1.17")
+	log.Infof("Server started, Fluentbase version 2.1")
 
 	// Initialize the server
 	server := &Server{
