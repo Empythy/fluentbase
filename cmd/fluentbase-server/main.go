@@ -9,7 +9,7 @@ import (
 	"net/http"
 	"os"
 	"os/signal"
-	"runtime"
+	//"runtime"
 	"strconv"
 	"strings"
 	"sync"
@@ -47,20 +47,20 @@ var httpTransport = true
 type hserver struct{}
 
 func (s *hserver) Send(ctx context.Context, in *hservice.MessageRequest) (*hservice.MessageReply, error) {
-	return &hservice.MessageReply{Ok: true}, nil
-}
+  return &hservice.MessageReply{Ok: true}, nil
+ }
 
 func main() {
 	gitsha := " (" + core.GitSHA + ")"
 	if gitsha == " (0000000)" {
 		gitsha = ""
 	}
-	versionLine := `fluentbase-server version: ` + core.Version + gitsha
+	//versionLine := `fluentbase-server version:  `  core.Version + gitsha
 
 	output := os.Stderr
 	flag.Usage = func() {
 		fmt.Fprintf(output,
-			versionLine+`
+			/*versionLine+*/ `
 
 Usage: fluentbase-server [-p port]
 
@@ -140,7 +140,7 @@ Developer Options:
 			flag.Usage()
 			return
 		case "--version":
-			fmt.Fprintf(os.Stdout, "%s\n", versionLine)
+			fmt.Fprintf(os.Stdout, "%s\n",/*, versionLine*/ "current version: 1.17")
 			return
 		case "--protected-mode", "-protected-mode":
 			i++
@@ -259,10 +259,11 @@ Developer Options:
 	core.DevMode = devMode
 	core.ShowDebugMessages = veryVerbose
 
-	hostd := ""
+	/*hostd := ""
 	if host != "" {
 		hostd = "Addr: " + host + ", "
 	}
+*/
 	var pidferr error
 
 	var cleanedup bool
@@ -311,14 +312,14 @@ Developer Options:
 	}()
 
 
-	fmt.Fprintf(logw, `
-  
-     Welcome to Fluentbase %s%s %d bit (%s/%s)
-     %sPort: %d, PID: %d
+//fmt.Fprintf(logw, `Welcome to Fluentbase %s%s %d bit (%s/%s)  %sPort: %d, PID: %d  https://fluentbase.org `+"\n", core.Version,  gitsha, strconv.IntSize, runtime.GOARCH, runtime.GOOS, hostd, port, os.Getpid())
 
-      fluentbase.org
- 
-`+"\n", core.Version, gitsha, strconv.IntSize, runtime.GOARCH, runtime.GOOS, hostd, port, os.Getpid())
+fmt.Println("\n")
+fmt.Println("  Welcome to Fluentbase, current version 2.0")
+fmt.Println("  https://fluentbase.org")
+fmt.Fprintf(logw, `  PID: %d`, os.Getpid())
+fmt.Println("\n")
+
 	if pidferr != nil {
 		log.Warnf("pidfile: %v", pidferr)
 	}
