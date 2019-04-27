@@ -11,7 +11,7 @@ import (
 const dialTimeout = time.Second * 3
 const pingTimeout = time.Second
 
-// Pool represents a pool of tile38 connections.
+// Pool represents a pool of fluentbase connections.
 type Pool struct {
 	mu     sync.Mutex
 	conns  []*Conn
