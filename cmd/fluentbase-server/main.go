@@ -66,7 +66,7 @@ Usage: fluentbase-server [-p port]
 
 Basic Options:
   -h hostname : listening host
-  -p port     : listening port (default: 9851)
+  -p port     : listening port (default: 9470)
   -d path     : data directory (default: data)
   -q          : no logging. totally silent output
   -v          : enable verbose logging
