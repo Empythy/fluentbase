@@ -316,7 +316,7 @@ fluentbase uses the [Redis RESP](http://redis.io/topics/protocol) protocol nativ
 
 ## Contact
 
-Grigoriy Safronov [@gvsafronov](gvsafronov@gmail.com)
+Grigoriy Safronov <gvsafronov@gmail.com>
 
 ## License
 
