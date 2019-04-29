@@ -315,7 +315,7 @@ Developer Options:
 //fmt.Fprintf(logw, `Welcome to Fluentbase %s%s %d bit (%s/%s)  %sPort: %d, PID: %d  https://fluentbase.org `+"\n", core.Version,  gitsha, strconv.IntSize, runtime.GOARCH, runtime.GOOS, hostd, port, os.Getpid())
 
 fmt.Println("\n")
-fmt.Println("  Welcome to Fluentbase, current version 2.0")
+fmt.Println("  Welcome to Fluentbase, current version 2.1")
 fmt.Println("  https://fluentbase.org")
 fmt.Fprintf(logw, `  PID: %d`, os.Getpid())
 fmt.Println("\n")
