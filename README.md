@@ -267,7 +267,7 @@ One of the simplest ways to call a fluentbase command is to use HTTP. From the c
 curl --data "set fleet truck3 point 33.4762 -112.10923" localhost:9470
 
 # call with request in the url path
-curl localhost:9851/set+fleet+truck3+point+33.4762+-112.10923
+curl localhost:9470/set+fleet+truck3+point+33.4762+-112.10923
 ```
 
 #### Websockets
