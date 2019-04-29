@@ -264,7 +264,7 @@ One of the simplest ways to call a fluentbase command is to use HTTP. From the c
 
 ```
 # call with request in the body
-curl --data "set fleet truck3 point 33.4762 -112.10923" localhost:9851
+curl --data "set fleet truck3 point 33.4762 -112.10923" localhost:9470
 
 # call with request in the url path
 curl localhost:9851/set+fleet+truck3+point+33.4762+-112.10923
@@ -277,7 +277,7 @@ Websockets can be used when you need to Geofence and keep the connection alive. 
 There is the option to use a plain telnet connection. The default output through telnet is [RESP](http://redis.io/topics/protocol).
 
 ```
-telnet localhost 9851
+telnet localhost 9470
 set fleet truck3 point 33.4762 -112.10923
 +OK
 
