@@ -7,7 +7,7 @@
 <a href="https://travis-ci.org/tidwall/fluentbase"><img src="https://travis-ci.org/tidwall/fluentbase.svg?branch=master" alt="Build Status"></a>
 </p>
 
-fluentbase is an open source (MIT licensed), in-memory geolocation data store, spatial index, and realtime geofence, distributed uder MIT LICENSE using code of [Tile-38](https://github.com/tidwall/tile38), which also distributed uder MIT LICENSE.  It supports a variety of object types including lat/lon points, bounding boxes, XYZ tiles, Geohashes, and GeoJSON. 
+Fluentbase is an open source (MIT licensed), in-memory geolocation data store, spatial index, and realtime geofence, distributed uder MIT LICENSE using code of [Tile-38](https://github.com/tidwall/tile38), which also distributed uder MIT LICENSE.  It supports a variety of object types including lat/lon points, bounding boxes, XYZ tiles, Geohashes, and GeoJSON. 
 
 <p align="center">
 <i>This README is quick start document. You can find detailed documentation at <a href="https://fluentbase.org">https://fluentbase.org</a>.</i><br><br>
