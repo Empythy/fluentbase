@@ -318,6 +318,12 @@ fluentbase uses the [Redis RESP](http://redis.io/topics/protocol) protocol nativ
 
 Grigoriy Safronov <gvsafronov@gmail.com>
 
+
+## Gratitude
+
+Josh Baker, thank you for sharing your experience and knowledge with me.
+
+
 ## License
 
 fluentbase source code is available under the MIT [License](/LICENSE).
