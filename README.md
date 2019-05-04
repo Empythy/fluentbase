@@ -71,7 +71,7 @@ $ ./fluentbase-cli
 > help
 ```
 
-## <a name="cli"></a>Playing with fluentbase
+## Starts working
 
 Basic operations:
 ```
