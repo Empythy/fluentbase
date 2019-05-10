@@ -202,9 +202,7 @@ func (sw *scanWriter) fieldMatch(fields []float64, o geojson.Object) (fvals []fl
 		for _, where := range sw.wheres {
 			if where.field == "z" {
 				if !gotz {
-					if point, ok := o.(*geojson.Point); ok {
-						z = point.Z()
-					}
+					z, _ = geojson.IsPoint(o)
 				}
 				if !where.match(z) {
 					return
@@ -258,9 +256,7 @@ func (sw *scanWriter) fieldMatch(fields []float64, o geojson.Object) (fvals []fl
 		for _, where := range sw.wheres {
 			if where.field == "z" {
 				if !gotz {
-					if point, ok := o.(*geojson.Point); ok {
-						z = point.Z()
-					}
+					z, _ = geojson.IsPoint(o)
 				}
 				if !where.match(z) {
 					return
@@ -449,10 +445,7 @@ func (sw *scanWriter) writeObject(opts ScanWriterParams) bool {
 				vals = append(vals, resp.StringValue(opts.o.String()))
 			case outputPoints:
 				point := opts.o.Center()
-				var z float64
-				if point, ok := opts.o.(*geojson.Point); ok {
-					z = point.Z()
-				}
+				z, _ := geojson.IsPoint(opts.o)
 				if z != 0 {
 					vals = append(vals, resp.ArrayValue([]resp.Value{
 						resp.FloatValue(point.Y),

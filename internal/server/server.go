@@ -171,11 +171,13 @@ func Serve(host string, port int, dir string, http bool) error {
 		return err
 	}
 
+	server.geomParseOpts = *geojson.DefaultParseOptions
+	server.geomParseOpts.AllowSimplePoints = true
+
 	// Allow for geometry indexing options through environment variables:
 	// T38IDXGEOMKIND -- None, RTree, QuadTree
 	// T38IDXGEOM -- Min number of points in a geometry for indexing.
 	// T38IDXMULTI -- Min number of object in a Multi/Collection for indexing.
-	server.geomParseOpts = *geojson.DefaultParseOptions
 	n, err := strconv.ParseUint(os.Getenv("T38IDXGEOM"), 10, 32)
 	if err == nil {
 		server.geomParseOpts.IndexGeometry = int(n)

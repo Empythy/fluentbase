@@ -196,10 +196,7 @@ func (server *Server) cmdGet(msg *Message) (resp.Value, error) {
 			buf.Write(appendJSONSimplePoint(nil, o))
 		} else {
 			point := o.Center()
-			var z float64
-			if gPoint, ok := o.(*geojson.Point); ok {
-				z = gPoint.Z()
-			}
+			z, _ := geojson.IsPoint(o)
 			if z != 0 {
 				vals = append(vals, resp.ArrayValue([]resp.Value{
 					resp.StringValue(strconv.FormatFloat(point.Y, 'f', -1, 64)),
@@ -672,7 +669,11 @@ func (server *Server) parseSetArgs(vs []string) (
 				err = errInvalidArgument(slon)
 				return
 			}
-			d.obj = geojson.NewPoint(geometry.Point{X: x, Y: y})
+			if server.geomParseOpts.AllowSimplePoints {
+				d.obj = geojson.NewSimplePoint(geometry.Point{X: x, Y: y})
+			} else {
+				d.obj = geojson.NewPoint(geometry.Point{X: x, Y: y})
+			}
 		} else {
 			var x, y, z float64
 			y, err = strconv.ParseFloat(slat, 64)
@@ -742,7 +743,11 @@ func (server *Server) parseSetArgs(vs []string) (
 			return
 		}
 		lat, lon := geohash.Decode(shash)
-		d.obj = geojson.NewPoint(geometry.Point{X: lon, Y: lat})
+		if server.geomParseOpts.AllowSimplePoints {
+			d.obj = geojson.NewSimplePoint(geometry.Point{X: lon, Y: lat})
+		} else {
+			d.obj = geojson.NewPoint(geometry.Point{X: lon, Y: lat})
+		}
 	case lcb(typ, "object"):
 		var object string
 		if vs, object, ok = tokenval(vs); !ok || object == "" {

@@ -227,21 +227,31 @@ func (c *Server) followStep(host string, port int, followc int) error {
 	}
 
 	// Send the replication port to the leader
-	v, err := conn.Do("replconf", "listening-port", c.port)
-	if err != nil {
-		return err
-	}
-	if v.Error() != nil {
-		return v.Error()
-	}
-	if v.String() != "OK" {
-		return errors.New("invalid response to replconf request")
-	}
-	if core.ShowDebugMessages {
-		log.Debug("follow:", addr, ":replconf")
+	if err := func() error {
+		v, err := conn.Do("replconf", "listening-port", c.port)
+		if err != nil {
+			return err
+		}
+		if v.Error() != nil {
+			return v.Error()
+		}
+		if v.String() != "OK" {
+			return errors.New("invalid response to replconf request")
+		}
+		return nil
+	}(); err != nil {
+		if strings.HasPrefix(err.Error(), "ERR unknown command") {
+			log.Warn("follow:", addr, ":replconf", "not available on leader")
+		} else {
+			return err
+		}
+	} else {
+		if core.ShowDebugMessages {
+			log.Debug("follow:", addr, ":replconf")
+		}
 	}
 
-	v, err = conn.Do("aof", pos)
+	v, err := conn.Do("aof", pos)
 	if err != nil {
 		return err
 	}

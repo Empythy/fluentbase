@@ -10,6 +10,8 @@ func Clip(obj geojson.Object, clipper geojson.Object) (clipped geojson.Object) {
 	switch obj := obj.(type) {
 	case *geojson.Point:
 		return clipPoint(obj, clipper)
+	case *geojson.SimplePoint:
+		return clipSimplePoint(obj, clipper)
 	case *geojson.Rect:
 		return clipRect(obj, clipper)
 	case *geojson.LineString:
